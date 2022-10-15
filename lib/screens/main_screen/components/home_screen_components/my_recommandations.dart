@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants.dart';
 import 'package:portfolio/models/recommendation.dart';
@@ -11,6 +12,7 @@ class MyRecommandations extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ScrollController _controller = ScrollController();
     return Padding(
       padding: EdgeInsets.symmetric(
           vertical: defaultPadding,
@@ -23,20 +25,26 @@ class MyRecommandations extends StatelessWidget {
             style: Theme.of(context).textTheme.headline6,
           ),
           const SizedBox(height: defaultPadding),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: List.generate(
-                recommendations.length,
-                (index) => Padding(
-                  padding: const EdgeInsets.only(right: defaultPadding),
-                  child: RecommendationCard(
-                    recommendation: recommendations[index],
-                  ),
-                ),
-              ),
+          SizedBox(
+            height: 200,
+            child: ScrollConfiguration(
+              behavior: ScrollConfiguration.of(context).copyWith(dragDevices: {
+                PointerDeviceKind.touch,
+                PointerDeviceKind.mouse,
+              }),
+              child: ListView.builder(
+                  clipBehavior: Clip.none,
+                  scrollDirection: Axis.horizontal,
+                  controller: _controller,
+                  itemCount: recommendations.length,
+                  itemBuilder: (BuildContext context, int index) => Padding(
+                        padding: const EdgeInsets.only(right: defaultPadding),
+                        child: RecommendationCard(
+                          recommendation: recommendations[index],
+                        ),
+                      )),
             ),
-          ),
+          )
         ],
       ),
     );
