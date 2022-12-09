@@ -14,3 +14,10 @@ const bannerButton = 'regardez maintenant';
 //Side menu constants
 const myName = 'Thierry Copéré';
 const myFunction = 'Développeur Flutter';
+const dowlonadCV = 'Télécharger mon CV';
+
+//My projects constants
+const myProjects = 'Mes projets récents';
+
+//Last missions constants
+const lastMissions = 'Mes dernières missions';

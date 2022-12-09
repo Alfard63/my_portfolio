@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants.dart';
+import 'package:portfolio/models/styles.dart';
 
 class AreaInfoText extends StatelessWidget {
   final String title, text;
@@ -18,9 +19,9 @@ class AreaInfoText extends StatelessWidget {
         children: [
           Text(
             title,
-            style: blueStyle,
+            style: Styles.categoryTitle,
           ),
-          Text(text)
+          Text(text, style: Styles.body),
         ],
       ),
     );

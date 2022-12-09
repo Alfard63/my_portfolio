@@ -1,7 +1,7 @@
-class Recommendation {
+class Mission {
   final String? name, entreprise, source, text, image;
 
-  const Recommendation({
+  const Mission({
     this.name,
     this.entreprise,
     this.source,
@@ -10,8 +10,8 @@ class Recommendation {
   });
 }
 
-final List<Recommendation> recommendations = [
-  const Recommendation(
+final List<Mission> recommendations = [
+  const Mission(
     name: "John Doe",
     entreprise: "Entreprise",
     source: "Source",
@@ -19,7 +19,7 @@ final List<Recommendation> recommendations = [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
     image: "https://i.imgur.com/2YQZQzS.png",
   ),
-  const Recommendation(
+  const Mission(
     name: "John Doe",
     entreprise: "Entreprise",
     source: "Source",
@@ -27,7 +27,7 @@ final List<Recommendation> recommendations = [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
     image: "https://i.imgur.com/2YQZQzS.png",
   ),
-  const Recommendation(
+  const Mission(
     name: "John Doe",
     entreprise: "Entreprise",
     source: "Source",
@@ -35,7 +35,7 @@ final List<Recommendation> recommendations = [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
     image: "https://i.imgur.com/2YQZQzS.png",
   ),
-  const Recommendation(
+  const Mission(
     name: "John Doe",
     entreprise: "Entreprise",
     source: "Source",

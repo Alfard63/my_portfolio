@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants.dart';
+import 'package:portfolio/models/app_colors.dart';
+import 'package:portfolio/models/styles.dart';
 
 class AnimatedCircularProgressIndicator extends StatelessWidget {
   final String label;
@@ -23,13 +25,16 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
               fit: StackFit.expand,
               children: [
                 CircularProgressIndicator(
-                  strokeWidth: 10,
+                  strokeWidth: 15,
                   value: value,
-                  color: primaryColor,
-                  backgroundColor: darkColor,
+                  color: AppColors.primaryColor,
+                  backgroundColor: AppColors.primaryColor.withOpacity(0.2),
                 ),
                 Center(
-                  child: Text((value * 100).toStringAsFixed(0) + "%"),
+                  child: Text(
+                    (value * 100).toStringAsFixed(0) + "%",
+                    style: Styles.categoryTitle,
+                  ),
                 ),
               ],
             ),
@@ -40,7 +45,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
           label,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
-          style: blueStyle,
+          style: Styles.categoryTitle,
         ),
       ],
     );

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants.dart';
 import 'package:portfolio/responsive.dart';
 import 'package:portfolio/screens/main_screen/components/home_screen_components/hight_lights_info_components/animated_counter.dart';
-import 'package:portfolio/screens/main_screen/components/home_screen_components/hight_lights_info_components/hight_light.dart';
+import 'package:portfolio/screens/main_screen/components/home_screen_components/hight_lights_info_components/hight_light_text.dart';
 
 class HightLightsInfo extends StatelessWidget {
   const HightLightsInfo({
@@ -21,11 +21,11 @@ class HightLightsInfo extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
-                    HighLight(
+                    HighLightText(
                       counter: AnimatedCounter(value: 30, text: "+"),
                       label: "Projets réalisés",
                     ),
-                    HighLight(
+                    HighLightText(
                       counter: AnimatedCounter(value: 30, text: "+"),
                       label: "Projets réalisés",
                     ),
@@ -35,11 +35,11 @@ class HightLightsInfo extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
-                    HighLight(
+                    HighLightText(
                       counter: AnimatedCounter(value: 30, text: "+"),
                       label: "Projets réalisés",
                     ),
-                    HighLight(
+                    HighLightText(
                       counter: AnimatedCounter(value: 30, text: "+"),
                       label: "Projets réalisés",
                     ),
@@ -50,19 +50,19 @@ class HightLightsInfo extends StatelessWidget {
           : Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
-                HighLight(
+                HighLightText(
                   counter: AnimatedCounter(value: 30, text: "+"),
                   label: "Projets réalisés",
                 ),
-                HighLight(
+                HighLightText(
                   counter: AnimatedCounter(value: 30, text: "+"),
                   label: "Projets réalisés",
                 ),
-                HighLight(
+                HighLightText(
                   counter: AnimatedCounter(value: 30, text: "+"),
                   label: "Projets réalisés",
                 ),
-                HighLight(
+                HighLightText(
                   counter: AnimatedCounter(value: 30, text: "+"),
                   label: "Projets réalisés",
                 ),

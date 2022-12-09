@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants.dart';
+import 'package:portfolio/models/styles.dart';
 
 class AnimatedCounter extends StatelessWidget {
   final int value;
@@ -17,10 +18,7 @@ class AnimatedCounter extends StatelessWidget {
       duration: defaultDuration,
       builder: ((context, value, child) => Text(
             "$value+",
-            style: Theme.of(context)
-                .textTheme
-                .headline6!
-                .copyWith(color: primaryColor),
+            style: Styles.categoryTitle,
           )),
     );
   }

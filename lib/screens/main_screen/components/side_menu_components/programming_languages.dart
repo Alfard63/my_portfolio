@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/animated_linear_progress_indicator.dart';
 import 'package:portfolio/constants/constants.dart';
+import 'package:portfolio/models/app_colors.dart';
+import 'package:portfolio/models/styles.dart';
 
 class ProgrammingLanguages extends StatelessWidget {
   const ProgrammingLanguages({
@@ -15,7 +17,9 @@ class ProgrammingLanguages extends StatelessWidget {
         const Divider(),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-          child: Text("Coding", style: Theme.of(context).textTheme.subtitle2),
+          child: Text("Coding",
+              style:
+                  Styles.categoryTitle.copyWith(color: AppColors.textColor1)),
         ),
         const AnimatedLinearProgressIndicator(
           label: "Dart",

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants.dart';
-import 'package:portfolio/models/recommendation.dart';
+import 'package:portfolio/models/mission.dart';
+import 'package:portfolio/models/styles.dart';
 
-class RecommendationCard extends StatelessWidget {
-  final Recommendation recommendation;
-  const RecommendationCard({
+class MissionCard extends StatelessWidget {
+  final Mission mission;
+  const MissionCard({
     Key? key,
-    required this.recommendation,
+    required this.mission,
   }) : super(key: key);
 
   @override
@@ -14,7 +15,7 @@ class RecommendationCard extends StatelessWidget {
     return Container(
       width: 400,
       padding: const EdgeInsets.all(defaultPadding),
-      color: secondaryColor,
+      decoration: Styles.cardDecoration,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -25,18 +26,18 @@ class RecommendationCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    recommendation.name!,
+                    mission.name!,
                     style: Theme.of(context).textTheme.subtitle2,
                   ),
-                  Text(recommendation.entreprise!),
+                  Text(mission.entreprise!),
                 ],
               ),
               const Spacer(),
-              Text(recommendation.source!),
+              Text(mission.source!),
             ],
           ),
           const SizedBox(height: defaultPadding),
-          Text(recommendation.text!),
+          Text(mission.text!),
         ],
       ),
     );

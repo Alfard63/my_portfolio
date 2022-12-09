@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants.dart';
+import 'package:portfolio/models/app_colors.dart';
+import 'package:portfolio/models/styles.dart';
 
 class KnowledgeText extends StatelessWidget {
   final String text;
@@ -13,9 +15,14 @@ class KnowledgeText extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        const Icon(Icons.check, color: primaryColor),
-        const SizedBox(width: defaultPadding / 2),
-        Text(text),
+        const Icon(Icons.check, color: AppColors.secondaryColor),
+        const SizedBox(width: defaultPadding / 3),
+        Text(
+          text,
+          style: Styles.body,
+          overflow: TextOverflow.ellipsis,
+          maxLines: 2,
+        ),
       ],
     );
   }

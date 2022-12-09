@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/constants/constants.dart';
 import 'package:portfolio/constants/text_constants.dart';
+import 'package:portfolio/models/app_colors.dart';
 import 'package:portfolio/screens/main_screen/components/home_screen.dart';
 
 void main() {
@@ -17,14 +17,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: appName,
       theme: ThemeData.dark().copyWith(
-        primaryColor: primaryColor,
-        scaffoldBackgroundColor: bgColor,
-        canvasColor: bgColor,
-        textTheme: GoogleFonts.kanitTextTheme(Theme.of(context).textTheme)
+        primaryColor: AppColors.primaryColor,
+        scaffoldBackgroundColor: AppColors.primaryColor,
+        canvasColor: AppColors.bgColor,
+        textTheme: GoogleFonts.nunitoTextTheme(Theme.of(context).textTheme)
             .apply(bodyColor: Colors.white)
             .copyWith(
-              bodyText1: const TextStyle(color: bodyTextColor),
-              bodyText2: const TextStyle(color: bodyTextColor),
+              bodyText1: const TextStyle(color: AppColors.textColor1),
+              bodyText2: const TextStyle(color: AppColors.textColor2),
             ),
       ),
       home: const HomeScreen(),

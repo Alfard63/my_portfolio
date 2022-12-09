@@ -1,31 +1,32 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants.dart';
-import 'package:portfolio/models/recommendation.dart';
-import 'package:portfolio/responsive.dart';
-import 'package:portfolio/screens/main_screen/components/home_screen_components/my_recommation_components/recommandation_card.dart';
+import 'package:portfolio/constants/text_constants.dart';
+import 'package:portfolio/models/mission.dart';
+import 'package:portfolio/models/styles.dart';
+import 'package:portfolio/screens/main_screen/components/home_screen_components/my_recommation_components/mission_card.dart';
 
-class MyRecommandations extends StatelessWidget {
-  const MyRecommandations({
+class MyMissions extends StatelessWidget {
+  const MyMissions({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final ScrollController _controller = ScrollController();
-    return Padding(
-      padding: EdgeInsets.symmetric(
-          vertical: defaultPadding,
-          horizontal: !Responsive.isDesktop(context) ? defaultPadding : 0),
+    return Container(
+      clipBehavior: Clip.none,
+      margin: const EdgeInsets.all(defaultPadding),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Recommandations",
-            style: Theme.of(context).textTheme.headline6,
+            lastMissions,
+            style: Styles.categoryBigTitle,
           ),
           const SizedBox(height: defaultPadding),
-          SizedBox(
+          Container(
+            clipBehavior: Clip.none,
             height: 200,
             child: ScrollConfiguration(
               behavior: ScrollConfiguration.of(context).copyWith(dragDevices: {
@@ -39,8 +40,8 @@ class MyRecommandations extends StatelessWidget {
                   itemCount: recommendations.length,
                   itemBuilder: (BuildContext context, int index) => Padding(
                         padding: const EdgeInsets.only(right: defaultPadding),
-                        child: RecommendationCard(
-                          recommendation: recommendations[index],
+                        child: MissionCard(
+                          mission: recommendations[index],
                         ),
                       )),
             ),

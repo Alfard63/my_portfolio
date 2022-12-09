@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants.dart';
+import 'package:portfolio/models/app_colors.dart';
 import 'package:portfolio/models/project.dart';
+import 'package:portfolio/models/styles.dart';
 import 'package:portfolio/responsive.dart';
+import 'package:portfolio/screens/main_screen/components/home_screen_components/home_banner_components/bordered_text.dart';
 
 class ProjectCard extends StatelessWidget {
   final Project project;
@@ -12,33 +15,36 @@ class ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double fontSize = Responsive.isMobile(context)
+        ? 15
+        : Responsive.isMobileLarge(context)
+            ? 15
+            : Responsive.isTablet(context)
+                ? 25
+                : 17;
     return Container(
-      padding: const EdgeInsets.all(defaultPadding),
-      color: secondaryColor,
+      decoration: Styles.cardDecoration,
+      padding: const EdgeInsets.all(defaultPadding / 2),
       child: Column(
+        mainAxisSize: MainAxisSize.max,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            project.title!,
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.subtitle2,
+          BorderedText(
+            text: project.title!,
+            fontSize: fontSize,
+            color: AppColors.specialTextColor,
           ),
+          const SizedBox(height: defaultPadding / 2),
+          BorderedText(
+              text: project.description!,
+              fontSize: fontSize,
+              color: AppColors.textColor2),
           const Spacer(),
-          Text(
-            project.description!,
-            maxLines: Responsive.isMobileLarge(context) ? 3 : 4,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(height: 1.5),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisSize: MainAxisSize.max,
+            children: [if (project.links != null) ...project.links!],
           ),
-          const Spacer(),
-          TextButton(
-            onPressed: () {},
-            child: const Text(
-              "Voir le projet >>",
-              style: TextStyle(color: primaryColor),
-            ),
-          )
         ],
       ),
     );

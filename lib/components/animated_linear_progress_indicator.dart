@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants.dart';
+import 'package:portfolio/models/app_colors.dart';
+import 'package:portfolio/models/styles.dart';
 
 class AnimatedLinearProgressIndicator extends StatelessWidget {
   final double percentage;
@@ -22,16 +24,17 @@ class AnimatedLinearProgressIndicator extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(label, style: blueStyle),
-                Text("${(value * 100).toStringAsFixed(0)}%"),
+                Text(label, style: Styles.categoryTitle),
+                Text("${(value * 100).toStringAsFixed(0)}%",
+                    style: Styles.categoryTitle),
               ],
             ),
             const SizedBox(height: defaultPadding / 2),
             LinearProgressIndicator(
               minHeight: 10,
               value: value,
-              color: primaryColor,
-              backgroundColor: darkColor,
+              color: AppColors.primaryColor,
+              backgroundColor: AppColors.secondaryColor,
             ),
           ],
         ),

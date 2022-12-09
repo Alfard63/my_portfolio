@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/animated_circular_progress_indicator.dart';
 import 'package:portfolio/constants/constants.dart';
+import 'package:portfolio/models/app_colors.dart';
+import 'package:portfolio/models/styles.dart';
 
 class Skills extends StatelessWidget {
   const Skills({
@@ -17,10 +19,11 @@ class Skills extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
             "Compétences",
-            style: Theme.of(context).textTheme.subtitle2,
+            style: Styles.categoryTitle.copyWith(color: AppColors.textColor1),
           ),
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
             Expanded(
               child: AnimatedCircularProgressIndicator(
@@ -34,9 +37,8 @@ class Skills extends StatelessWidget {
             SizedBox(width: defaultPadding),
             Expanded(
               child: AnimatedCircularProgressIndicator(
-                  percentage: 55, label: "PostGreSQL"),
+                  percentage: 55, label: "Serverpod"),
             ),
-            SizedBox(width: defaultPadding),
           ],
         ),
       ],
