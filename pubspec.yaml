@@ -38,6 +38,9 @@ dependencies:
   flutter_svg: ^1.1.5
   animated_text_kit: ^4.2.2
   video_player: ^2.4.7
+  flutter_bloc: ^8.1.1
+  font_awesome_flutter: ^10.2.1
+  url_launcher: ^6.1.7
 
 dev_dependencies:
   flutter_test:
