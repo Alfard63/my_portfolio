@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants.dart';
 import 'package:portfolio/constants/text_constants.dart';
-import 'package:portfolio/models/app_colors.dart';
 import 'package:portfolio/models/project.dart';
 import 'package:portfolio/models/styles.dart';
 import 'package:portfolio/responsive.dart';

@@ -25,7 +25,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
               fit: StackFit.expand,
               children: [
                 CircularProgressIndicator(
-                  strokeWidth: 15,
+                  strokeWidth: 12,
                   value: value,
                   color: AppColors.primaryColor,
                   backgroundColor: AppColors.primaryColor.withOpacity(0.2),
@@ -45,7 +45,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
           label,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
-          style: Styles.categoryTitle,
+          style: Styles.categoryTitle.copyWith(fontSize: 12),
         ),
       ],
     );

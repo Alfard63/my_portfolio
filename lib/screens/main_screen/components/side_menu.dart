@@ -17,21 +17,16 @@ class SideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: AppColors.primaryColor,
+      backgroundColor: AppColors.bgColor,
       child: SafeArea(
-        child: Column(
-          children: [
-            const MyInfo(),
-            Expanded(
-              child: SingleChildScrollView(
-                child: Container(
+        child: Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const MyInfo(),
+                const Social(),
+                Container(
                   padding: const EdgeInsets.all(defaultPadding),
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(bgImg),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
                   child: Column(
                     children: [
                       AreaInfoText(
@@ -48,13 +43,12 @@ class SideMenu extends StatelessWidget {
                       const SizedBox(height: defaultPadding),
                       const Knowledge(),
                       const SizedBox(height: defaultPadding),
-                      const Social(),
                     ],
                   ),
                 ),
-              ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

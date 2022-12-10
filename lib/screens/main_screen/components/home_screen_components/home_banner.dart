@@ -15,7 +15,7 @@ class HomeBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 3,
+      aspectRatio: 3.5,
       child: Stack(
         fit: StackFit.expand,
         children: [
