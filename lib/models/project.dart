@@ -45,9 +45,9 @@ List<Project> projects = [
       description:
           "Petite application qui vous fera réviser vos départements de France métropôle. Mini projet servant à mettre en avant l’utilisation de 2 librairies",
       image: "https://i.imgur.com/2YQZQzS.png",
-      url: "https://firebase.google.com/",
+      url: "https://quiz.alfard.dev/",
       links: [
-        _webIcon("https://firebase.google.com/"),
+        _webIcon("https://quiz.alfard.dev/"),
       ],
       libraries: [
         "svg_path_parser",
