@@ -19,35 +19,33 @@ class SideMenu extends StatelessWidget {
     return Drawer(
       backgroundColor: AppColors.bgColor,
       child: SafeArea(
-        child: Expanded(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                const MyInfo(),
-                const Social(),
-                Container(
-                  padding: const EdgeInsets.all(defaultPadding),
-                  child: Column(
-                    children: [
-                      AreaInfoText(
-                        title: "Age",
-                        text: "${DateTime.now().year - 1988} ans",
-                      ),
-                      const AreaInfoText(
-                        title: "Adresse",
-                        text: "Clermont-Fd (63)",
-                      ),
-                      const Skills(),
-                      const SizedBox(height: defaultPadding),
-                      const ProgrammingLanguages(),
-                      const SizedBox(height: defaultPadding),
-                      const Knowledge(),
-                      const SizedBox(height: defaultPadding),
-                    ],
-                  ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const MyInfo(),
+              const Social(),
+              Container(
+                padding: const EdgeInsets.all(defaultPadding),
+                child: Column(
+                  children: [
+                    AreaInfoText(
+                      title: "Age",
+                      text: "${DateTime.now().year - 1988} ans",
+                    ),
+                    const AreaInfoText(
+                      title: "Adresse",
+                      text: "Clermont-Fd (63)",
+                    ),
+                    const Skills(),
+                    const SizedBox(height: defaultPadding),
+                    const ProgrammingLanguages(),
+                    const SizedBox(height: defaultPadding),
+                    const Knowledge(),
+                    const SizedBox(height: defaultPadding),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
